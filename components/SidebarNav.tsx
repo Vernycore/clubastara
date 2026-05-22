@@ -4,6 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { MessageCircle } from 'lucide-react';
 
+const assetPath = (path: string) => `/clubastra${path}`;
+
 const navigation = [
   { href: '/#inicio', label: 'Inicio' },
   { href: '/#servicios', label: 'Servicios' },
@@ -17,7 +19,7 @@ export default function SidebarNav() {
     <header className="top-nav">
       <div className="top-nav-inner">
         <Link href="/#inicio" className="brand-link" aria-label="Club Astra inicio">
-          <Image src="/logo.avif" alt="Club Astra" width={58} height={58} priority />
+          <Image src={assetPath('/logo.avif')} alt="Club Astra" width={58} height={58} priority />
         </Link>
 
         <nav className="menu-list-top" aria-label="Navegación principal">

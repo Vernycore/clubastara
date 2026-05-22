@@ -19,13 +19,15 @@ import {
   UsersRound,
 } from 'lucide-react';
 
+const assetPath = (path: string) => `/clubastra${path}`;
+
 const services = [
   {
     title: 'Mantenimiento Preventivo',
     description: 'Evita fallas inesperadas con revisiones programadas y soporte técnico especializado para tu unidad.',
     badge: 'Prevención',
     icon: ShieldCheck,
-    image: '/manteniiento_preventivo.png',
+    image: assetPath('/manteniiento_preventivo.png'),
     className: 'service-featured',
   },
   {
@@ -33,7 +35,7 @@ const services = [
     description: 'Sigue operando mientras tu unidad está en taller.',
     badge: 'Continuidad',
     icon: BusFront,
-    image: '/vehiculo_de_reemplazo.png',
+    image: assetPath('/vehiculo_de_reemplazo.png'),
     className: 'service-compact',
   },
   {
@@ -41,7 +43,7 @@ const services = [
     description: 'Apoyo técnico y mecánico cuando tengas una emergencia.',
     badge: 'Emergencia',
     icon: AlertTriangle,
-    image: '/asistemcioa_en_ruta.png',
+    image: assetPath('/asistemcioa_en_ruta.png'),
     className: 'service-compact',
   },
   {
@@ -49,7 +51,7 @@ const services = [
     description: 'Accede a una red coordinada para resolver más rápido.',
     badge: 'Cobertura',
     icon: Network,
-    image: '/red_de_talleres_aliados.png',
+    image: assetPath('/red_de_talleres_aliados.png'),
     className: 'service-compact',
   },
   {
@@ -57,7 +59,7 @@ const services = [
     description: 'Traslado seguro de tu unidad ante fallas mayores.',
     badge: 'Rescate',
     icon: CircleDollarSign,
-    image: '/asistencia_en_grua.png',
+    image: assetPath('/asistencia_en_grua.png'),
     className: 'service-compact',
   },
 ];
@@ -114,8 +116,8 @@ export default function HomePage() {
     <>
       <div className="landing-page">
         <section id="inicio" className="landing-hero">
-          <video className="hero-video" autoPlay muted loop playsInline poster="/minibuses.jpg" aria-hidden="true">
-            <source src="/mp4.mp4" type="video/mp4" />
+          <video className="hero-video" autoPlay muted loop playsInline poster={assetPath('/minibuses.jpg')} aria-hidden="true">
+            <source src={assetPath('/mp4.mp4')} type="video/mp4" />
           </video>
           <div className="hero-backdrop" />
           <div className="site-container hero-layout">
@@ -167,8 +169,8 @@ export default function HomePage() {
                   </div>
                   <div className="phone-visual" aria-hidden="true">
                     <picture>
-                      <source srcSet="/whatsap_astra_transparent.png" type="image/png" />
-                      <img src="/whatsapp-phone.svg" alt="" />
+                      <source srcSet={assetPath('/whatsap_astra_transparent.png')} type="image/png" />
+                      <img src={assetPath('/whatsapp-phone.svg')} alt="" />
                     </picture>
                   </div>
                 </div>
@@ -211,7 +213,7 @@ export default function HomePage() {
         <section id="mision" className="mission-section">
           <div className="site-container mission-grid">
             <div className="mission-image">
-              <img src="/Nuestra_comunidad.png" alt="Flota Club Astra" />
+              <img src={assetPath('/Nuestra_comunidad.png')} alt="Flota Club Astra" />
               <div className="mission-image-badge">
                 <ShieldCheck />
                 <span>Respaldo para transportistas</span>
@@ -333,7 +335,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="community-image">
-              <img src="/nuestra_mision.png" alt="Comunidad Club Astra" />
+              <img src={assetPath('/nuestra_mision.png')} alt="Comunidad Club Astra" />
             </div>
           </div>
         </section>
